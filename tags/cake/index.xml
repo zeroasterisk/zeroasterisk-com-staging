@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cake on Alan Blount &amp; Family | zeroasterisk</title>
+    <link>https://zeroasterisk.github.io/zeroasterisk-com-staging/tags/cake/</link>
+    <description>Recent content in cake on Alan Blount &amp; Family | zeroasterisk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Feb 2010 02:59:45 +0000</lastBuildDate><atom:link href="https://zeroasterisk.github.io/zeroasterisk-com-staging/tags/cake/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CakePHP beforeSave() gotcha: need to set $this-&gt;__exists to true if setting a primary key</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-com-staging/2010/02/18/cakephp-beforesave-gotcha-this-__exists/</link>
+      <pubDate>Fri, 19 Feb 2010 02:59:45 +0000</pubDate>
+      
+      <guid>https://zeroasterisk.github.io/zeroasterisk-com-staging/2010/02/18/cakephp-beforesave-gotcha-this-__exists/</guid>
+      <description>I added an update to CakePHP Book: beforeSave()
+Also, if you add a primary key which would turn an “insert” into an “update” within beforeSave() you’ll need to set $this-&amp;gt;__exists = true;… the call to $this-&amp;gt;exists(); happens in model.php before the callback to beforeSave().
+if (!isset($this-&amp;amp;gt;data[$this-&amp;amp;gt;name][&#39;id&#39;]) &amp;amp;&amp;amp; isset($this-&amp;amp;gt;data[$this-&amp;amp;gt;name][&#39;unique_field&#39;])) { $found = $this-&amp;amp;gt;find(&amp;quot;first&amp;quot;,array( &amp;quot;recursive&amp;quot; =&amp;amp;gt; -1, &amp;quot;fields&amp;quot; =&amp;amp;gt; array(&amp;quot;id&amp;quot;), &amp;quot;conditions&amp;quot; =&amp;amp;gt; array(&amp;quot;unique_field&amp;quot; =&amp;amp;gt; $this-&amp;amp;gt;data[$this-&amp;amp;gt;name][&#39;unique_field&#39;]))); if (!empty($found) &amp;amp;&amp;amp; isset($found[$this-&amp;amp;gt;name][&#39;id&#39;])) { $this-&amp;amp;gt;id = $this-&amp;amp;gt;data[$this-&amp;amp;gt;name][&#39;id&#39;] = $found[$this-&amp;amp;gt;name][&#39;id&#39;]; &amp;lt;strong&amp;gt;$this-&amp;amp;gt;__exists = true;&amp;lt;/strong&amp;gt; } } return parent::beforeSave(); }</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cakephp on Alan Blount &amp; Family | zeroasterisk</title>
+    <link>https://zeroasterisk.github.io/zeroasterisk-com-staging/categories/cakephp/</link>
+    <description>Recent content in cakephp on Alan Blount &amp; Family | zeroasterisk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Feb 2010 02:59:45 +0000</lastBuildDate><atom:link href="https://zeroasterisk.github.io/zeroasterisk-com-staging/categories/cakephp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CakePHP beforeSave() gotcha: need to set $this-&gt;__exists to true if setting a primary key</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-com-staging/2010/02/18/cakephp-beforesave-gotcha-this-__exists/</link>
+      <pubDate>Fri, 19 Feb 2010 02:59:45 +0000</pubDate>
+      
+      <guid>https://zeroasterisk.github.io/zeroasterisk-com-staging/2010/02/18/cakephp-beforesave-gotcha-this-__exists/</guid>
+      <description>I added an update to CakePHP Book: beforeSave()
+Also, if you add a primary key which would turn an “insert” into an “update” within beforeSave() you’ll need to set $this-&amp;gt;__exists = true;… the call to $this-&amp;gt;exists(); happens in model.php before the callback to beforeSave().
+if (!isset($this-&amp;amp;gt;data[$this-&amp;amp;gt;name][&#39;id&#39;]) &amp;amp;&amp;amp; isset($this-&amp;amp;gt;data[$this-&amp;amp;gt;name][&#39;unique_field&#39;])) { $found = $this-&amp;amp;gt;find(&amp;quot;first&amp;quot;,array( &amp;quot;recursive&amp;quot; =&amp;amp;gt; -1, &amp;quot;fields&amp;quot; =&amp;amp;gt; array(&amp;quot;id&amp;quot;), &amp;quot;conditions&amp;quot; =&amp;amp;gt; array(&amp;quot;unique_field&amp;quot; =&amp;amp;gt; $this-&amp;amp;gt;data[$this-&amp;amp;gt;name][&#39;unique_field&#39;]))); if (!empty($found) &amp;amp;&amp;amp; isset($found[$this-&amp;amp;gt;name][&#39;id&#39;])) { $this-&amp;amp;gt;id = $this-&amp;amp;gt;data[$this-&amp;amp;gt;name][&#39;id&#39;] = $found[$this-&amp;amp;gt;name][&#39;id&#39;]; &amp;lt;strong&amp;gt;$this-&amp;amp;gt;__exists = true;&amp;lt;/strong&amp;gt; } } return parent::beforeSave(); }</description>
+    </item>
+    
+    <item>
+      <title>DarkAuth for the win!</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-com-staging/2009/12/02/darkauth-for-the-win/</link>
+      <pubDate>Wed, 02 Dec 2009 16:37:33 +0000</pubDate>
+      
+      <guid>https://zeroasterisk.github.io/zeroasterisk-com-staging/2009/12/02/darkauth-for-the-win/</guid>
+      <description>I’ve been working with CakePHP for a few years now and am very happy with it. I’ve been working with the 1.2 version for a few months (since it went stable) and playing with the Auth and ACL core components.
+I’ve decided that ACL is too complicated for most setups, and Auth is fine, but not perfect. So after some research, I switched to the DarkAuth component, which was much better suited to my needs.</description>
+    </item>
+    
+    <item>
+      <title>A CakePHP gotcha for migrating from 1.1 to 1.2&#43; on Model-&gt;create()</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-com-staging/2009/11/30/a-cakephp-gotcha-for-migrating-from-1-1-to-1-2-on-model-create/</link>
+      <pubDate>Mon, 30 Nov 2009 16:15:28 +0000</pubDate>
+      
+      <guid>https://zeroasterisk.github.io/zeroasterisk-com-staging/2009/11/30/a-cakephp-gotcha-for-migrating-from-1-1-to-1-2-on-model-create/</guid>
+      <description>I reported this as a ticket, but as it turns out, it’s a design choice.. but it’s enough of a gotcha that I thought I should report it.
+What happened The $this-&amp;gt;ModelName-&amp;gt;create() set the defaults for the next save, which is what I would expect. But on my database there’s a default value set for the ‘created’ field (the standard for datetime columns in PHPmyAdmin) as well as the ‘modified’ and ‘updated’ fields.</description>
+    </item>
+    
+    <item>
+      <title>CakePHP Workshop, in Review</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-com-staging/2008/09/08/cakephp-workshop-in-review/</link>
+      <pubDate>Mon, 08 Sep 2008 15:38:13 +0000</pubDate>
+      
+      <guid>https://zeroasterisk.github.io/zeroasterisk-com-staging/2008/09/08/cakephp-workshop-in-review/</guid>
+      <description>We had the very good fortune of attending the first CakePHP workshop, in Raleigh, NC this weekend. Four of the core developers of the project where there, including the project manger and the lead developer; along with one of the guys behind jquery-UI. The non-presenters ranged from people who had never used [We had the very good fortune of attending the first CakePHP workshop, in Raleigh, NC this weekend. Four of the core developers of the project where there, including the project manger and the lead developer; along with one of the guys behind jquery-UI.</description>
+    </item>
+    
+    <item>
+      <title>CakePHP Workshop 2008.09.06</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-com-staging/2008/09/06/cakephp-workshop-20080906/</link>
+      <pubDate>Sat, 06 Sep 2008 13:00:18 +0000</pubDate>
+      
+      <guid>https://zeroasterisk.github.io/zeroasterisk-com-staging/2008/09/06/cakephp-workshop-20080906/</guid>
+      <description>So here I am, in Raleigh, NC – waiting for the CakePHP Workshop to start… We survived the rain so far, waiting to see if there is any flooding or whatnot.
+Have met a few people here so far, all seem very friendly. Looking forward to seeing what happens and what we learn along the way.
+I am wearing my “I [heart] LAMP” geek-shirt today, as it seemed appropriate (if a little over the top nerdy).</description>
+    </item>
+    
+  </channel>
+</rss>
